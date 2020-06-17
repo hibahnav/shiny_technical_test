@@ -70,7 +70,7 @@ Here is the desired functionality:
 
 ## Stage 3 - Adding date range input widget
 
-The current application only contains one user input widget in the control panel: a radio button selector the plot type. To better serve your team's needs, you decide to add a date range input widget to allow the user to select the range of data they would like to visualize.  
+The current application only contains one user input widget in the control panel: a radio button selector for the plot type. To better serve your team's needs, you decide to add a date range input widget to allow the user to select the range of data they would like to visualize.  
 
 To complete this stage, please create a date range input widget in the app UI (note: you do not need to implement the server-side functionality yet; simply add the UI element). You may find the `shiny::dateRangeInput` function helpful for this task.
 
@@ -86,7 +86,7 @@ Fantastic! Now you have an app that allows the user to select the type of plot t
 
 Here is the desired functionality:
 
-1. **[REQ|2]** The user can enter select any date between May 1st 2019 and June 10 2020.
+1. **[REQ|2]** The user can select any date range between May 1st 2019 and June 10th 2020.
 2. **[REQ|8]** Upon entering a valid date range, the plot re-renders to show only data from the selected range.
 3. **[BONUS|5]** As an error check, the upper range of the date range widget must be greater than the lower range (eg. May 15, 2019 to May 10, 2019 is not a valid date range). Implement a mechanism that gracefully handles these types of input errors by providing some form of feedback to the user.
 
