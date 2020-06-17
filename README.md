@@ -27,7 +27,7 @@ Make sure that you have the following software installed (try to match the descr
 
 Once your local development environment is set up, fork this repository (https://github.com/LKS-CHART/shiny_technical_test) to your own GitHub account. To fork the repository, click the "Fork" button shown here:
 
-![](fork_screenshot.png)
+![](fork_screenshot.PNG)
 
 After forking the repo, clone the forked repo to your local environment. 
 
@@ -51,7 +51,7 @@ There are a few provided files that you may find helpful for this test:
 
 If an application launches in your browser without error, then congratulations! It should look something like this:
 
-![](screenshot.png)
+![](screenshot.PNG)
 
 You may now proceed to Stage 2. In the next stages, you will iteratively improve upon this application. Note that required tasks will be labeled by **[REQ|#]** where # indicates the points awarded for the task, but if you have extra time, feel free to express your creativity by making additional enhancements! 
 
