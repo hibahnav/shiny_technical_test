@@ -2,9 +2,6 @@
 
 plot_clicks <- function(ad_clicks, plot_type = "both"){
     
-    require(ggplot2)
-    require(dplyr)
-    
     plot_expr <- switch(plot_type,
                         scatter = ggplot2::geom_point(size = 4),
                         line = ggplot2::geom_line(size = 1.2),

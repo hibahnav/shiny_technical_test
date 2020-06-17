@@ -25,7 +25,11 @@ Make sure that you have the following software installed (try to match the descr
 
 ### GitHub
 
-Once your local development environment is set up, fork this repository (https://github.com/LKS-CHART/shiny_technical_test) to your own GitHub account. After forking the repo, clone the forked repo to your local environment. 
+Once your local development environment is set up, fork this repository (https://github.com/LKS-CHART/shiny_technical_test) to your own GitHub account. To fork the repository, click the "Fork" button shown here:
+
+![](fork_screenshot.png)
+
+After forking the repo, clone the forked repo to your local environment. 
 
 Before you start developing your Shiny app, let's review the files in the directory.
 
@@ -42,24 +46,27 @@ There are a few provided files that you may find helpful for this test:
 ```
 # 1. Launch RStudio
 # 2. Select File -> Open Project -> Select shiny_technical_test.Rproj in the cloned repo
-# 3. In the R Console, run `shiny::runApp("app")`
+# 3. In the R Console, run `shiny::runApp("app/")`
 ```
 
-If an application launches in your browser without error, then congratulations! You may proceed to Stage 2. In the next stages, you will iteratively improve upon this application.
+If an application launches in your browser without error, then congratulations! It should look something like this:
+
+![](screenshot.png)
+
+You may now proceed to Stage 2. In the next stages, you will iteratively improve upon this application. Note that required tasks will be labeled by **[REQ|#]** where # indicates the points awarded for the task, but if you have extra time, feel free to express your creativity by making additional enhancements! 
 
 ## Stage 2 - Implementing server-side functionality of the plot type picker
 
-Upon launching the app, you noticed a radio button picker that allowed the user to select one of three types of plots to visualize: line, scatter, or both. However, you also noticed that this feature was not functional, as clicking the various buttons did not update the plot.
+Upon launching the app, you noticed a radio button picker that allowed the user to select the plot type to visualize: line, scatter, or both. However, you also noticed that this feature was not functional, as clicking the various buttons did not update the plot.
 
 To complete this stage, please add the necessary server-side functionality to allow the user to use the plot type picker to update the type of plot that is visualized. Reviewing the provided **ggplot.R** start plotting function may be helpful. **Hint:** the value of the radio button picker can be accessed from Shiny via Shiny's `input` object, in association with the specific input UI element's `inputId`.
 
 Here is the desired functionality:
 
-1. The user can select on any of the three radio buttons, indicating line, scatter, or both.
-2. Upon clicking a radio button, the plot will re-render and display the appropriate plot as selected by the user.
-3. The default plot type on app launch should be "both".
+1. **[REQ|5]** Upon clicking a radio button, the plot will re-render and display the appropriate plot as selected by the user.
+2. **[REQ|2]** The default selected radio button on app launch should be "both".
 
-**Upon completion of this stage, commit your changes to Git, with the commit message "Add plot picker server"**
+**[REQ|2] Upon completion of this stage, commit your changes to Git, with the commit message "Add plot picker server"**
 
 ## Stage 3 - Adding date range input widget
 
@@ -67,7 +74,11 @@ The current application only contains one user input widget in the control panel
 
 To complete this stage, please create a date range input widget in the app UI (note: you do not need to implement the server-side functionality yet; simply add the UI element). You may find the `shiny::dateRangeInput` function helpful for this task.
 
-**Upon completion of this stage, commit your changes to Git, with the commit message "Add date range UI".**
+Here is the desired functionality:
+
+1. **[REQ|5]** Add an additional UI element to the user input widget (left-side of the application) that allows the user to select a date range (minimum and maximum date). Do not implement the server-side functionality yet!
+
+**[REQ|2] Upon completion of this stage, commit your changes to Git, with the commit message "Add date range UI".**
 
 ## Stage 4 - Implementing server-side functionality of the date range widget
 
@@ -75,18 +86,31 @@ Fantastic! Now you have an app that allows the user to select the type of plot t
 
 Here is the desired functionality:
 
-1. The user can enter select any date between May 1st 2019 and June 10 2020.
-2. Upon entering a valid date range, the plot re-renders to show only data from the selected range.
-3. The upper range of the date range widget must be greater than the lower range (eg. May 15, 2019 to May 10, 2019 is not a valid date, since May 10, 2019 is less than May 15, 2019).
+1. **[REQ|2]** The user can enter select any date between May 1st 2019 and June 10 2020.
+2. **[REQ|8]** Upon entering a valid date range, the plot re-renders to show only data from the selected range.
+3. **[BONUS|5]** As an error check, the upper range of the date range widget must be greater than the lower range (eg. May 15, 2019 to May 10, 2019 is not a valid date range). Implement a mechanism that gracefully handles these types of input errors by providing some form of feedback to the user.
 
-**Upon completion of this stage, commit your changes to Git, with the commit message "Add date range server".**
+**[REQ|2] Upon completion of this stage, commit your changes to Git, with the commit message "Add date range server".**
 
-## Stage 5 - Submit your Shiny app pull request
+At this point, **please push all commits to your own forked repository**. This marks the end of the required portion of the technical test.
 
-If you have successfully gotten to this point, congratulations! You are indeed a Shiny ninja. In this last stage, you are required to submit your Shiny app via pull request to the original repository. Here are the steps to accomplish this:
+## Stage 5 - Optional enhancements!
 
-1. Make sure to commit all your local changes to Git, and push them to your forked GitHub repository.
-2. Create a new pull request to the master branch of the LKS-CHART/shiny_technical_test base repository. 
-3. Submit your pull request, and tag @dwhdai for review.
+If you have reached this point with time to spare, great job! With the remaining time, feel free to express your inner design guru and make this application stand out. This is completely optional, but will be an opportunity to showcase your skills.
+
+Some things you can consider:
+
+1. Improving the plot visualization
+2. Adding more plot types
+3. Creating a "Submit" button that triggers plot rendering
+
+## Submission
+
+If you have successfully gotten to this point, congratulations! You are indeed a Shiny ninja. Please follow these steps to submit your test:
+
+1. Commit and push your code to your forked repository
+2. Send an email to Jennifer.Deevy@unityhealth.to and David.Dai@unityhealth.to with a link to your forked repository. Please make sure that the repository is public :)
+
+Please send this email prior to the end of your allotted time.
 
 ... and you have defeated the Shiny dojo!
