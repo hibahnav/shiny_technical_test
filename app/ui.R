@@ -1,5 +1,7 @@
 library(shiny)
 
+dat <- read.csv(here("ad_clicks.csv"))
+
 shinyUI(fluidPage(
 
     # Application title
@@ -12,7 +14,8 @@ shinyUI(fluidPage(
                 label = "Plot Type",
                 choices = c("both", "scatter", "line"),
                 inline = TRUE
-            )
+            ),
+            dateRangeInput("date_range","Date Range",min=min(dat$day),max=max(dat$day))
         ),
 
         mainPanel(
