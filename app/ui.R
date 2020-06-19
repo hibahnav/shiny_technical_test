@@ -15,7 +15,7 @@ shinyUI(fluidPage(
                 choices = c("both", "scatter", "line"),
                 inline = TRUE
             ),
-            dateRangeInput("date_range","Date Range",min=min(dat$day),max=max(dat$day))
+            dateRangeInput("day","Date Range",min=min(dat$day),max=max(dat$day))
         ),
 
         mainPanel(
