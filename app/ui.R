@@ -10,7 +10,7 @@ shinyUI(fluidPage(
             radioButtons(
                 inputId = "plot_type",
                 label = "Plot Type",
-                choices = c("line", "scatter", "both"),
+                choices = c("both", "scatter", "line"),
                 inline = TRUE
             )
         ),
